@@ -1,0 +1,20 @@
+import duckdb
+from constants import DB_PATH
+conn = duckdb.connect(str(DB_PATH))
+
+conn.execute(
+"""
+    CREATE OR REPLACE TABLE TRANSACTION.TRANSACTIONS
+    ( TIMESTAMP TIMESTAMP,
+      TXN_DATE DATE,
+      SKU_CODE VARCHAR,
+      TRANSACTION_TYPE VARCHAR,
+      QUANTITY DECIMAL,
+      UNIT_PRICE DECIMAL,
+      REVENUE DECIMAL,
+      COST DECIMAL,
+      REALIZED_PROFIT DECIMAL,
+      SOURCE_CD VARCHAR,
+      LOAD_TS TIMESTAMP )
+"""
+)

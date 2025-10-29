@@ -1,0 +1,12 @@
+source_column,target_column,primary_key
+timestamp,timestamp,Y
+txn_date,txn_date,N
+sku_code,sku_code,Y
+transaction_type,transaction_type,Y
+quantity,quantity,N
+unit_price,unit_price,N
+revenue,revenue,N
+cost,cost,N
+realized_profit,realized_profit,N
+N/A,SOURCE_CD,N
+N/A,LOAD_TS,N

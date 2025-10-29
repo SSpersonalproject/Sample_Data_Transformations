@@ -1,0 +1,23 @@
+import duckdb
+from constants import DB_PATH
+conn = duckdb.connect(str(DB_PATH))
+
+conn.execute(
+"""
+    CREATE OR REPLACE TABLE PRODUCT.PRODUCTS
+    ( SKU_CODE VARCHAR,
+      PRODUCT_CATEGORY_ID VARCHAR,
+      BRAND_ID VARCHAR,
+      SUB_VARIETAL_NAME VARCHAR,
+      ABV DECIMAL,
+      BOTTLE_ML DECIMAL,
+      YEAR DECIMAL,
+      AGE VARCHAR,
+      GRAPE_VARIETY VARCHAR,
+      GRAIN_VARIETY VARCHAR,
+      BLEND VARCHAR,
+      BARREL_TYPE VARCHAR,
+      SOURCE_CD VARCHAR,
+      LOAD_TS TIMESTAMP )
+"""
+)

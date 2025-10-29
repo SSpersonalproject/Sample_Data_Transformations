@@ -1,0 +1,15 @@
+source_column,target_column,primary_key
+sku_code,sku_code,Y
+product_category.id,product_category_id,N
+brand.id,brand_id,N
+sub_varietal.name,sub_varietal_name,N
+attribute.abv,abv,N
+attribute.bottle_ml,bottle_ml,N
+attribute.year,year,N
+attribute.age,age,N
+attribute.grape_variety,grape_variety,N
+attribute.grain_variety,grain_variety,N
+attribute.blend,blend,N
+attribute.barrel_type,barrel_type,N
+N/A,SOURCE_CD,N
+N/A,LOAD_TS,N

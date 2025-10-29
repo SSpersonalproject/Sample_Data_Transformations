@@ -1,0 +1,22 @@
+import duckdb
+from constants import DB_PATH
+
+conn = duckdb.connect(str(DB_PATH))
+
+conn.execute(
+"""
+    CREATE OR REPLACE VIEW TRANSACTION.AGG_TRANSACTIONS AS
+    SELECT 
+        TXN_DATE, 
+        SKU_CODE, 
+        SUM(QUANTITY) AS QUANTITY,
+        SUM(UNIT_PRICE) AS UNIT_PRICE, 
+        SUM(REVENUE) AS REVENUE,
+        SUM(COST) AS COST, 
+        SUM(REALIZED_PROFIT) AS REALIZED_PROFIT,
+        SOURCE_CD, 
+        LOAD_TS
+    FROM TRANSACTION.TRANSACTIONS
+    GROUP BY TXN_DATE, SKU_CODE, SOURCE_CD, LOAD_TS
+"""
+)

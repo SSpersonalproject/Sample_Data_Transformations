@@ -1,0 +1,5 @@
+source_column,target_column,primary_key
+product_category.id,product_category_id,Y
+product_category.name,product_category_name,N
+N/A,SOURCE_CD,N
+N/A,LOAD_TS,N

@@ -1,0 +1,7 @@
+source_column,target_column,primary_key
+region.id,region_id,Y
+region.name,region_name,N
+region.country.id,region_country_id,N
+region.country.name,region_country_name,N
+N/A,SOURCE_CD,N
+N/A,LOAD_TS,N

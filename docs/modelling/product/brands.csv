@@ -1,0 +1,5 @@
+source_column,target_column,primary_key
+brand.id,brand_id,Y
+brand.name,brand_name,N
+N/A,SOURCE_CD,N
+N/A,LOAD_TS,N
